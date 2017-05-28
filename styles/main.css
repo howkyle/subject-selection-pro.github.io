@@ -176,5 +176,25 @@ font-family: 'Lato', sans-serif;
 }
 
 .techInfo{
+	width: 40%;
+	height: 50%;
+	float: left;
+	margin-bottom: 5%;
+	/*padding: 10px 10px;*/
+	text-align: center;
+
+}
+.techInfo ul{
+	list-style: none;
+	padding-top: 5%;
+}
+.techInfo li{
+	padding: 5px 5px;
+}
+.prodDesc{
 	height :50%;
+	width: 60%;
+	float: left;
+	padding: 10px 10px;
+	margin-bottom: 5%;
 }
