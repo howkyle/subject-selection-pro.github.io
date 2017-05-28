@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Subject Selection Pro</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript" src="js/response.js"></script>
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Archivo+Black|Gloria+Hallelujah|Patua+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+</head>
+<body ng-app="responsiveApp">
+	<div id="nav">
+		<ul>
+			<li> <a href="#home">Home</a> </li>
+			<li><a href="#highlights">Highlights</a></li>
+			<li> <a href="#product">Product</a> </li>
+			<li> <a href="#about">About</a> </li>
+		</ul>	
+	</div>
+
+	<div id="home" class="parallax">
+		<div class="container">
+		<div class="homeDisplay border blue">
+			<h1>The step forward with your 6th form application process.</h1>
+			<!-- sad face -->
+			
+			<h3>Select your next set of students with the click of a button.</h3>
+
+			<h4>welcome to the way forward</h4>
+			<h4>save time, save effort with </h4>
+			<h1>Subject Selection Pro</h1>
+		</div>
+			
+			<img class="logo border blue" style="margin-top: 50px;" src="images/ssp_logo2.png">
+			<!-- logo -->
+		</div>	
+	</div>
+	<div class="blue" id="highlights">
+		<div class="container" style="margin-top:50px;">
+		<!-- all the students have to do  -->
+		<div class="students">
+			<h1>Students</h1>
+			<h1>register. select. wait</h1>
+			<ul>
+				<li><h4>Easy registration and login</h4></li>
+				<li><h4>Csec subject adding for students</h4></li>
+				<li><h4>Cape subject selection for students</h4></li>
+				<li><h4>Supports up to 4 choices for Cape Subjects <small>(not including mandatory)</small></h4></li>
+			</ul>
+		</div>
+		<div class="admin">
+				<h1>You?</h1>
+				<h1>Setup, click and that's it</h1>
+			<ul>
+				<li><h4>Configure <small>(tweak settings to customize class size the mandatory subjects)</small></h4></li>
+				<!-- all you have to do -->
+				<li><h4>One click matching<small> (with Hall's Stable Marriage)</small></h4></li>
+				<li><h4>Timetable generation <small>(Using graph coloring)</small></h4></li>
+				<!-- with graph coloring -->
+			</ul>
+		</div>
+				
+		</div>
+	</div>
+
+	<div id="product" ng-controller="responseCtrl">
+		<div class="container">
+			<img class="logo border blue" src="images/ssp_logo_textless.png">
+			<div class="feature border blue">
+				<!-- <h4>{{currentSlide.title}}</h4> -->
+				<img class="border" src="{{currentSlide.url}}">
+				<h5>{{currentSlide.caption}}</h5>
+			</div>
+			<div class="buttonControl">
+					<button ng-click="previousImage()"">&#10094;</button>
+					<button ng-click="nextImage()">&#10095;</button>
+			</div>
+		</div>	
+	</div>
+
+	<div id="about" class="blue" ng-controller="aboutCtrl">
+		<div class="container">
+			<div class="techInfo">
+			<h4>About SSP</h4>
+				<p>High schools in Jamaica need a system to efficiently assign student to classes based on their desired CAPE subjects as well as create timetables for sixth form students. Institutions wish to automate the subject selection and scheduling process for faster, more efficient results.</p>
+
+				<p>Subject Selection Pro is a web application made with efficiency in mind. With aims to solve the complex problems associated with automatically accepting eligible students based on CSEC subjects in addition to automatically generating a student's personalized timetable. With minimal staff input, Subject Selection Pro aims to minimize human error and computation time.</p>
+					<h4 style="padding-top: 50px;">Technologies Used</h4>
+					<ul>
+						<li>AngularJS</li>
+						<li>Flask</li>
+						<li>Postgresql</li>
+						<li>Bootstrap</li>
+					</ul>
+			</div>
+
+			<h4>Developers</h4>
+			<div class="devs" ng-repeat="dev in developers">
+				<h4>{{dev.name}}</h4>
+				<h5>{{dev.about}}</h5>
+				<img class="thumb border" src="{{dev.image}}">
+			</div>
+			
+		</div>
+		
+	</div>
+
+</body>
+</html>

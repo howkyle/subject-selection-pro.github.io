@@ -1,0 +1,17 @@
+[	{"title":"Register",
+	"url":"../images/features/register.png",
+	"caption":"Register"
+	}, 
+	{"title": "Login",
+	"url":"../images/features/login.png",
+	"caption":"Login"
+	}, 
+	{"title":"Csec",
+	"url":"../images/features/add_csec.png",
+	"caption":"Add Csec Subjects"
+	},
+	 {"title":"Cape",
+	"url":"../images/features/choose_cape.png",
+	"caption":"Choose prefered CAPE Subjects"
+	}
+]
